@@ -7,10 +7,10 @@ describe "Matrix " {
   test "Neo es el elegido" {
     assert.that(neo.esElElegido())
   }
-  test "vitalidad inicial de neo 10" {
+  test "vitalidad inicial de Neo 10" {
     assert.equals(10, neo.vitalidad())
   }
-  test "vitalidad de neo despues de un salto 5" {
+  test "vitalidad de Neo despues de un salto 5" {
     neo.saltar()
     assert.equals(5, neo.vitalidad())
   }
@@ -26,5 +26,18 @@ describe "Matrix " {
     morfeo.saltar()
     assert.equals(7, morfeo.vitalidad())
   }
-
+//Trinity//
+  test "Trinity es la elegida" {
+    assert.notThat(trinity.esElElegido())
+  }
+  test "vitalidad inicial de Trinity 0" {
+    assert.equals(0, trinity.vitalidad())
+  }
+  test "vitalidad de Trinity despues de un salto" {
+    trinity.saltar()
+    trinity.saltar()
+    trinity.saltar()
+    trinity.saltar()
+    assert.equals(0, trinity.vitalidad())
+  }
 }
