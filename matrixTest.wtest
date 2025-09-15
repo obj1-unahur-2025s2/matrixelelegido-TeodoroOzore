@@ -3,17 +3,28 @@ import matrix.*
 
 describe "Matrix " {
 
+//Neo//
   test "Neo es el elegido" {
     assert.that(neo.esElElegido())
   }
-
-  test "vitalidad inicial de neo" {
+  test "vitalidad inicial de neo 10" {
     assert.equals(10, neo.vitalidad())
   }
-  
-  test "vitalidad de neo despues de un salto" {
+  test "vitalidad de neo despues de un salto 5" {
     neo.saltar()
     assert.equals(5, neo.vitalidad())
+  }
+
+//Morfeo//
+  test "Morfeo no es el elegido" {
+    assert.notThat(morfeo.esElElegido())
+  }
+  test "Vitalidad inicial de Morfeo 8" {
+    assert.equals(8, morfeo.vitalidad())
+  }
+  test "Vitalidad de Morfeo despues de un salto 7" {
+    morfeo.saltar()
+    assert.equals(7, morfeo.vitalidad())
   }
 
 }
