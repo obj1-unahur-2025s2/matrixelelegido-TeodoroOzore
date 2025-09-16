@@ -26,6 +26,7 @@ describe "Matrix " {
     morfeo.saltar()
     assert.equals(7, morfeo.vitalidad())
   }
+
 //Trinity//
   test "Trinity es la elegida" {
     assert.notThat(trinity.esElElegido())
@@ -39,5 +40,13 @@ describe "Matrix " {
     trinity.saltar()
     trinity.saltar()
     assert.equals(0, trinity.vitalidad())
+  }
+
+//Nave
+  test "Cantidad de pasajeros inicial de la nave" {
+    assert.equals(3, nave.cantidadDePasajeros())
+  }
+  test "Pasajero de mayor vitalidad de la nave" {
+    assert.equals(neo, nave.pasajeroConMayorVitalidad())
   }
 }
